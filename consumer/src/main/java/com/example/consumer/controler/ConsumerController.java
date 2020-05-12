@@ -20,7 +20,7 @@ public class ConsumerController {
     @RequestMapping("/hello")
     public String hello(){
         //调用spring cloud服务提供者提供的服务 调用远程服务的返回值类型
-        return  restTemplate.getForEntity("http://localhost:8080/provider/hello",String.class).getBody();
+        return  restTemplate.getForEntity("http://springcloud-service-provider/provider/hello",String.class).getBody();
     }
 
 }
